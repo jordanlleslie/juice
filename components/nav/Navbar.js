@@ -7,6 +7,7 @@ const styles = {
     padding: "36px 72px",
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center"
   },
   headerOption: {
     margin: "0px 32px",
@@ -19,11 +20,11 @@ export default function Navbar() {
     <>
       <div style={styles.header}>
         <div>
-          <Link href="/">Emory Juice</Link>
+          <Link href="/"><Image src="/images/JuiceMainLogo.svg" width={240} height={100}/></Link>
         </div>
         <div>
-          <Link style={styles.headerOption} href="/">
-            Home
+          <Link style={styles.headerOption} href="/news">
+            News
           </Link>
           <Link style={styles.headerOption} href="/contact">
             Contact

@@ -1,8 +1,6 @@
 .container {
-  
+    background-color: rgb(220, 220, 220);
+    height: 1000px;
+    padding: 48px 72px;
 }
 
-.special {
-  color: yellowgreen;
-  font-weight: lighter;
-}
