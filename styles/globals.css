@@ -12,9 +12,14 @@ img {
 }
 
 * {
-  margin: 0
+  margin: 0;
+  text-decoration: none;
 }
 
 p {
-  margin: 0
+  margin: 0;
+}
+
+*:visited {
+  color: inherit;
 }
