@@ -1,39 +1,39 @@
 import Link from "next/link";
 import Image from "next/image";
-// import Spacer from "../shared/Spacer";
+import Spacer from "../shared/Spacer";
+import { DisplayM } from "../shared/Typeface";
+import utilStyles from "../../styles/utils.module.css";
 
 const styles = {
   header: {
-    padding: "36px 72px",
+    padding: "1.5rem",
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center"
   },
-  headerOption: {
-    margin: "0px 32px",
-    textDecoration: "none",
+  iconContainer: {
+  },
+  menuContainer: {
+    justifyContent:"flex-end"
   },
 };
 
+import { orange, gray } from "../../constants/Colors";
+
 export default function Navbar() {
   return (
-    <>
-      <div style={styles.header}>
-        <div>
-          <Link href="/"><Image src="/images/JuiceMainLogo.svg" width={240} height={100}/></Link>
-        </div>
-        <div>
-          <Link style={styles.headerOption} href="/news">
-            News
-          </Link>
-          <Link style={styles.headerOption} href="/contact">
-            Contact
-          </Link>
-          <Link style={styles.headerOption} href="/support">
-            Support
-          </Link>
-        </div>
+    <div style={styles.header}>
+      <div style={styles.iconContainer}>
+        <Link href="/" className={utilStyles.row}>
+          <Image src="/images/JuiceLogo.svg" width={64} height={64} />
+          <Spacer size={1} />
+          <DisplayM text="Emory Juice" color={orange.o} />
+        </Link>
       </div>
-    </>
+      <div style={styles.menuContainer} className={utilStyles.row}>
+        <DisplayM text="Menu" color={gray.b} />
+        <Spacer size={1} />
+        <Image src="/images/Menu.svg" width={64} height={64} />
+      </div>
+    </div>
   );
 }
