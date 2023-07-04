@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import Head from "next/head";
 
 export default function AlumniPage() {
@@ -9,9 +9,7 @@ export default function AlumniPage() {
           <title>Alumni</title>
         </Head>
         <section>
-            <p>
-                Juice Alumni Portal - Coming Soon!
-            </p>
+          <p>Juice Alumni Portal - Coming Soon!</p>
         </section>
       </Layout>
     </>

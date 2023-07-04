@@ -1,0 +1,40 @@
+@use "../base/colors.module";
+
+%sidebar {
+  width: 25%;
+  height: 100%;
+  background-color: colors.$orange-o;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuOption {
+  color: colors.$gray-w;
+  padding: 0.5rem 1rem;
+}
+
+.menuOption:hover {
+  background-color: colors.$orange-m;
+  border-radius: 0.5rem;
+}
+
+.sidebarCollapsed {
+  @extend %sidebar;
+  position: fixed;
+  right: -25%;
+  transform: translateX(100%);
+  transition: all 1s ease-in-out;
+}
+.sidebarExpanded {
+  @extend %sidebar;
+  position: fixed;
+  right: -25%;
+  transform: translateX(-100%);
+  transition: all 1s ease-in-out;
+}

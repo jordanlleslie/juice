@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import Head from "next/head";
 
 export default function RosterPage() {
@@ -9,9 +9,7 @@ export default function RosterPage() {
           <title>Roster</title>
         </Head>
         <section>
-            <p>
-                Juice Roster - Coming Soon!
-            </p>
+          <p>Juice Roster - Coming Soon!</p>
         </section>
       </Layout>
     </>

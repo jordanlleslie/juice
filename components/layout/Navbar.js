@@ -3,9 +3,9 @@ import Image from "next/image";
 import Spacer from "../shared/Spacer";
 import { DisplayM } from "../shared/Typeface";
 import styles from "../../styles.module.css";
-import colors from "../../sass/base/colors.module.scss";
+import colors from "../../sass/base/_colors.module.scss";
 
-export default function Navbar() {
+export default function Navbar({ handleCollapse }) {
   return (
     <div className={styles.headerContainer}>
       <div>
@@ -15,7 +15,12 @@ export default function Navbar() {
           <DisplayM text="Emory Juice" color={colors["orange-o"]} />
         </Link>
       </div>
-      <Image src="/images/Menu.svg" width={64} height={64} />
+      <Image
+        src="/images/Menu.svg"
+        width={64}
+        height={64}
+        onClick={handleCollapse}
+      />
     </div>
   );
 }

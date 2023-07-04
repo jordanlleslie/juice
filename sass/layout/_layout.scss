@@ -1,7 +1,13 @@
-@use "../base/colors";
+@use "../base/colors.module";
 
 .layoutContainer {
+  height: 100%;
+  width: 75%;
+}
+
+.childrenContainer {
   background-color: colors.$gray-4;
-  height: 1000px;
-  padding: 48px 72px;
+  margin: 0 1.5rem;
+  padding: 3rem 4.5rem;
+  height: 100%;
 }

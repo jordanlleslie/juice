@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import Head from "next/head";
 
 export default function NewsPage() {
@@ -9,9 +9,7 @@ export default function NewsPage() {
           <title>Juicy News</title>
         </Head>
         <section>
-            <p>
-                Juice News - Coming Soon!
-            </p>
+          <p>Juice News - Coming Soon!</p>
         </section>
       </Layout>
     </>

@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import Head from "next/head";
 
 export default function ShopPage() {
@@ -9,9 +9,7 @@ export default function ShopPage() {
           <title>Shop</title>
         </Head>
         <section>
-            <p>
-                Shop Juice Merch - Coming Soon!
-            </p>
+          <p>Shop Juice Merch - Coming Soon!</p>
         </section>
       </Layout>
     </>
