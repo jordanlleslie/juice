@@ -1,4 +1,4 @@
-import styles from "../../styles/utils.module.css";
+import styles from "../../styles.module.css";
 
 // TODO: Replace with Sass styles
 export function DisplayM(props) {

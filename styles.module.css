@@ -1,0 +1,23 @@
+.row {
+  display: flex;
+}
+
+.displayM {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* FLEX-BOX */
+.headerContainer {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.layoutContainer {
+  background-color: #ddd9e2;
+  height: 1000px;
+  padding: 48px 72px;
+}
+
+/*# sourceMappingURL=styles.module.css.map */

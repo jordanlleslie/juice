@@ -1,0 +1,7 @@
+@use "../base/colors";
+
+.layoutContainer {
+  background-color: colors.$gray-4;
+  height: 1000px;
+  padding: 48px 72px;
+}
