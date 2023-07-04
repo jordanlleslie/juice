@@ -21,6 +21,8 @@
   margin: 0;
   display: flex;
   justify-content: center;
+  transition: all 0.5s ease-in-out;
+  position: fixed;
 }
 
 .sidebarContainer {
@@ -39,22 +41,11 @@
 }
 
 .sidebarCollapsed {
-  position: fixed;
   right: -25%;
-  transform: translateX(100%);
-  transition: all 1s ease-in-out;
 }
 
 .sidebarExpanded {
-  position: fixed;
-  right: -25%;
-  transform: translateX(-100%);
-  transition: all 1s ease-in-out;
-}
-
-.layoutContainer {
-  height: 100%;
-  width: 75%;
+  right: 0;
 }
 
 .childrenContainer {
@@ -62,6 +53,16 @@
   margin: 0 1.5rem;
   padding: 3rem 4.5rem;
   height: 100%;
+}
+
+.withSidebar {
+  transform: translateX(-25%);
+  transition: all 0.5s ease-in-out;
+}
+
+.withoutSidebar {
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=styles.module.css.map */

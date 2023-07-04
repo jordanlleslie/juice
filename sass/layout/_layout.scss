@@ -1,8 +1,9 @@
 @use "../base/colors.module";
 
-.layoutContainer {
+%layoutContainer {
   height: 100%;
-  width: 75%;
+  width: 100%;
+  position: fixed;
 }
 
 .childrenContainer {
@@ -10,4 +11,14 @@
   margin: 0 1.5rem;
   padding: 3rem 4.5rem;
   height: 100%;
+}
+
+.withSidebar {
+  transform: translateX(-25%);
+  transition: all 0.5s ease-in-out;
+}
+
+.withoutSidebar {
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
 }

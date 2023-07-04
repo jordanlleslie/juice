@@ -6,20 +6,23 @@ import Sidebar from "./Sidebar";
 
 export default function Layout({ children }) {
   const [collapsed, setCollapsed] = useState(true);
+  // COLLAPSE SIDEBAR
   const handleCollapse = () => {
     setCollapsed(!collapsed);
   };
 
   return (
-    <div className={styles.row} style={{ height: "1000px" }}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.layoutContainer}>
+      {/* SIDEBAR */}
+      <Sidebar onClose={handleCollapse} collapsed={collapsed} />
+      {/* MAIN CONTENT */}
+      <div className={collapsed ? styles.withoutSidebar : styles.withSidebar}>
         <Navbar handleCollapse={handleCollapse} />
         <div className={styles.childrenContainer}>{children}</div>
       </div>
-      <Sidebar onClose={handleCollapse} collapsed={collapsed} />
     </div>
   );
 }
