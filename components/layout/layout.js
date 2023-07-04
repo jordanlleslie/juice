@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
-import Navbar from "./nav/Navbar";
+import Navbar from "../nav/Navbar";
+// TODO: Replace with Sass styles
 
 export default function Layout({ children }) {
   return (

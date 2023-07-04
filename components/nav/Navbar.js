@@ -4,19 +4,20 @@ import Spacer from "../shared/Spacer";
 import { DisplayM } from "../shared/Typeface";
 import utilStyles from "../../styles/utils.module.css";
 
+// TODO: Replace with Sass styles
 const styles = {
   header: {
     padding: "1.5rem",
     display: "flex",
     justifyContent: "space-between",
   },
-  iconContainer: {
-  },
+  iconContainer: {},
   menuContainer: {
-    justifyContent:"flex-end"
+    justifyContent: "flex-end",
   },
 };
 
+// TODO: Replace with Sass styles
 import { orange, gray } from "../../constants/Colors";
 
 export default function Navbar() {
@@ -30,8 +31,6 @@ export default function Navbar() {
         </Link>
       </div>
       <div style={styles.menuContainer} className={utilStyles.row}>
-        <DisplayM text="Menu" color={gray.b} />
-        <Spacer size={1} />
         <Image src="/images/Menu.svg" width={64} height={64} />
       </div>
     </div>

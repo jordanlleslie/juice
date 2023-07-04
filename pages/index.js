@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Layout from '../components/layout';
+import Head from "next/head";
+import Layout from "../components/layout/layout";
 
 export default function Home() {
   return (
@@ -8,9 +8,7 @@ export default function Home() {
         <title>Emory Juice Ultimate</title>
       </Head>
       <section>
-        <p>
-          Home Page - Coming Soon!
-        </p>
+        <p>Home Page - Coming Soon!</p>
       </section>
     </Layout>
   );
