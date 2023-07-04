@@ -2,6 +2,7 @@
 @use "../layout/sidebar.module" as s;
 @use "../base/mixins" as m;
 
+//
 %collapsibleLayout {
   height: 100%;
   width: 100%;
@@ -9,11 +10,13 @@
   transition: transform 0.5s ease-out;
 }
 
+// CONTAINS EVERYTHING EXCEPT SIDEBAR
 .mainContainer {
   background: colors.$gray-w;
   height: 100%;
 }
 
+// CONTAINER FOR ALL CONTENTS OF PAGE
 .childrenContainer {
   background-color: colors.$gray-4;
   margin: 0 1.5rem;
