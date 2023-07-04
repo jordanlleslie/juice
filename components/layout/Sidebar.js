@@ -5,9 +5,7 @@ import styles from "../../styles.module.css";
 export default function Sidebar({ onClose, collapsed }) {
   console.log(styles.sidebarCollapsed + " " + styles.sidebarExpanded);
   return (
-    <div
-      className={collapsed ? styles.sidebarCollapsed : styles.sidebarExpanded}
-    >
+    <div className={styles.sidebar}>
       <div className={styles.sidebarContainer}>
         <button onClick={onClose}>
           <Image src="images/Close.svg" width={48} height={48} />

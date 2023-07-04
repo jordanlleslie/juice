@@ -11,15 +11,19 @@ export default function Layout({ children }) {
     setCollapsed(!collapsed);
   };
 
+  const handleClickOut = () => {
+    if (!collapsed) setCollapsed(true);
+  };
+
   return (
-    <div>
+    <div className={collapsed ? styles.withoutSidebar : styles.withSidebar}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* SIDEBAR */}
       <Sidebar onClose={handleCollapse} collapsed={collapsed} />
       {/* MAIN CONTENT */}
-      <div className={collapsed ? styles.withoutSidebar : styles.withSidebar}>
+      <div className={styles.mainContainer} onClick={handleClickOut}>
         <Navbar handleCollapse={handleCollapse} />
         <div className={styles.childrenContainer}>{children}</div>
       </div>

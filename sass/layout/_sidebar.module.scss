@@ -1,13 +1,38 @@
 @use "../base/colors.module";
+@use "../base/mixins" as m;
 
-%sidebar {
-  width: 25%;
+$sidebar-xs: 100%;
+$sidebar-sm: 50%;
+$sidebar-md: 50%;
+$sidebar-lg: 40%;
+$sidebar-xl: 25%;
+
+.sidebar {
+  width: $sidebar-xs;
+  right: -$sidebar-xs;
+
+  @include m.sm {
+    width: $sidebar-sm;
+    right: -$sidebar-sm;
+  }
+  @include m.md {
+    width: $sidebar-md;
+    right: -$sidebar-md;
+  }
+  @include m.lg {
+    width: $sidebar-lg;
+    right: -$sidebar-lg;
+  }
+  @include m.xl {
+    width: $sidebar-xl;
+    right: -$sidebar-xl;
+  }
   height: 100%;
   background-color: colors.$orange-o;
   margin: 0;
   display: flex;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
+  // transition: all 0.5s ease-out;
   position: fixed;
 }
 
@@ -24,13 +49,4 @@
 .menuOption:hover {
   background-color: colors.$orange-m;
   border-radius: 0.5rem;
-}
-
-.sidebarCollapsed {
-  @extend %sidebar;
-  right: -25%;
-}
-.sidebarExpanded {
-  @extend %sidebar;
-  right: 0;
 }

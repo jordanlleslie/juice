@@ -1,9 +1,17 @@
 @use "../base/colors.module";
+@use "../layout/sidebar.module" as s;
+@use "../base/mixins" as m;
 
-%layoutContainer {
+%collapsibleLayout {
   height: 100%;
   width: 100%;
   position: fixed;
+  transition: transform 0.5s ease-out;
+}
+
+.mainContainer {
+  background: colors.$gray-w;
+  height: 100%;
 }
 
 .childrenContainer {
@@ -13,12 +21,32 @@
   height: 100%;
 }
 
+.withSidebar .mainContainer {
+  filter: brightness(50%);
+  * {
+    // prevents content on page from being interacted with while accessing menu
+    pointer-events: none;
+  }
+}
+
 .withSidebar {
-  transform: translateX(-25%);
-  transition: all 0.5s ease-in-out;
+  @extend %collapsibleLayout;
+  transform: translateX(0 - s.$sidebar-xs);
+  @include m.sm {
+    transform: translateX(0 - s.$sidebar-sm);
+  }
+  @include m.md {
+    transform: translateX(0 - s.$sidebar-md);
+  }
+  @include m.lg {
+    transform: translateX(0 - s.$sidebar-lg);
+  }
+  @include m.xl {
+    transform: translateX(0 - s.$sidebar-xl);
+  }
 }
 
 .withoutSidebar {
+  @extend %collapsibleLayout;
   transform: translateX(0);
-  transition: all 0.5s ease-in-out;
 }
