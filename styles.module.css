@@ -54,14 +54,18 @@
   flex-direction: column;
 }
 
-.menuOption {
+.selected, .menuOption {
   color: #fff;
   padding: 0.5rem 1rem;
 }
 
-.menuOption:hover {
+.menuOption :hover {
   background-color: #cd8b55;
   border-radius: 0.5rem;
+}
+
+.selected {
+  background-color: red;
 }
 
 .withoutSidebar, .withSidebar {

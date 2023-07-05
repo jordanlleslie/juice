@@ -2,12 +2,13 @@
 @use "../layout/sidebar.module" as s;
 @use "../base/mixins" as m;
 
-//
+$transition-time: 0.5s;
+
 %collapsibleLayout {
   height: 100%;
   width: 100%;
   position: fixed;
-  transition: transform 0.5s ease-out;
+  transition: transform $transition-time ease-out;
 }
 
 // CONTAINS EVERYTHING EXCEPT SIDEBAR

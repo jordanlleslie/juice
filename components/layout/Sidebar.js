@@ -1,27 +1,36 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles.module.css";
+import { useRouter } from "next/router";
 
-export default function Sidebar({ onClose, collapsed }) {
-  console.log(styles.sidebarCollapsed + " " + styles.sidebarExpanded);
+function SidebarOption({ text, href }) {
+  const pathname = useRouter().asPath;
+  return (
+    <Link
+      className={href === pathname ? styles.selected : styles.menuOption}
+      href={href}
+    >
+      {text}
+    </Link>
+  );
+}
+
+export default function Sidebar({ onClose, pathname }) {
   return (
     <div className={styles.sidebar}>
-      <div className={styles.sidebarContainer}>
-        <button onClick={onClose}>
-          <Image src="images/Close.svg" width={48} height={48} />
+      <div id="sidebarContainer" className={styles.sidebarContainer}>
+        <button>
+          <Image
+            src="images/Close.svg"
+            width={48}
+            height={48}
+            onClick={onClose}
+          />
         </button>
-        <Link className={styles.menuOption} href="/">
-          Home
-        </Link>
-        <Link className={styles.menuOption} href="/contact">
-          Contact
-        </Link>
-        <Link className={styles.menuOption} href="/support">
-          Support
-        </Link>
-        <Link className={styles.menuOption} href="/news">
-          News
-        </Link>
+        <SidebarOption href="/" text="Home" />
+        <SidebarOption href="/contact" text="Contact" />
+        <SidebarOption href="/support" text="Support" />
+        <SidebarOption href="/news" text="News" />
       </div>
     </div>
   );
