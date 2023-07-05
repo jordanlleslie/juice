@@ -3,19 +3,29 @@ import Image from "next/image";
 import styles from "../../styles.module.css";
 import { useRouter } from "next/router";
 
-function SidebarOption({ text, href }) {
-  const pathname = useRouter().asPath;
-  return (
-    <Link
-      className={href === pathname ? styles.selected : styles.menuOption}
-      href={href}
-    >
-      {text}
-    </Link>
-  );
-}
-
-export default function Sidebar({ onClose, pathname }) {
+export default function Sidebar({ onClose }) {
+  const SidebarOption = ({ text, href }) => {
+    // get current path to determine link behavior and styling
+    const currentPath = useRouter().asPath;
+    const handleClose = (e) => {
+      e.preventDefault();
+      onClose();
+      const target = e.target.getAttribute("href");
+      // if target is not current page, navigate to target
+      if (target !== currentPath) {
+        window.location = target;
+      }
+    };
+    return (
+      <Link
+        className={href === currentPath ? styles.selected : styles.menuOption}
+        href={href}
+        onClick={handleClose}
+      >
+        {text}
+      </Link>
+    );
+  };
   return (
     <div className={styles.sidebar}>
       <div id="sidebarContainer" className={styles.sidebarContainer}>

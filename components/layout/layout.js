@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
   const [collapsed, setCollapsed] = useState(true);
-  const router = useRouter();
   // COLLAPSE SIDEBAR
   const handleCollapse = () => {
     setCollapsed(!collapsed);
@@ -23,7 +22,7 @@ export default function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* SIDEBAR */}
-      <Sidebar onClose={handleCollapse} pathname={router.asPath} />
+      <Sidebar onClose={handleCollapse} />
       {/* MAIN CONTENT */}
       <div className={styles.mainContainer} onClick={handleClickOut}>
         <Navbar handleCollapse={handleCollapse} />
