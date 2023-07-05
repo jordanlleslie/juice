@@ -52,20 +52,21 @@
 .sidebarContainer {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 .selected, .menuOption {
   color: #fff;
   padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .menuOption :hover {
   background-color: #cd8b55;
-  border-radius: 0.5rem;
 }
 
 .selected {
-  background-color: red;
+  background-color: #ffbb5c;
 }
 
 .withoutSidebar, .withSidebar {

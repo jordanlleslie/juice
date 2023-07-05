@@ -40,22 +40,23 @@ $sidebar-xl: 25%;
 .sidebarContainer {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 %menuOptionBase {
   color: colors.$gray-w;
   padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .menuOption {
   @extend %menuOptionBase;
   :hover {
     background-color: colors.$orange-m;
-    border-radius: 0.5rem;
   }
 }
 
 .selected {
   @extend %menuOptionBase;
-  background-color: red;
+  background-color: colors.$orange-1;
 }

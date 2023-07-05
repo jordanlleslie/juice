@@ -10,7 +10,12 @@ export default function Navbar({ handleCollapse }) {
     <div className={styles.headerContainer}>
       <div>
         <Link href="/" className={styles.row}>
-          <Image src="/images/JuiceLogo.svg" width={64} height={64} />
+          <Image
+            src="/images/JuiceLogo.svg"
+            width={64}
+            height={64}
+            alt="Emory Juice logo"
+          />
           <Spacer size={1} />
           <DisplayM text="Emory Juice" color={colors["orange-o"]} />
         </Link>
@@ -20,6 +25,7 @@ export default function Navbar({ handleCollapse }) {
         width={64}
         height={64}
         onClick={handleCollapse}
+        alt="Open menu button"
       />
     </div>
   );

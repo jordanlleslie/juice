@@ -29,14 +29,13 @@ export default function Sidebar({ onClose }) {
   return (
     <div className={styles.sidebar}>
       <div id="sidebarContainer" className={styles.sidebarContainer}>
-        <button>
-          <Image
-            src="images/Close.svg"
-            width={48}
-            height={48}
-            onClick={onClose}
-          />
-        </button>
+        <Image
+          src="images/Close.svg"
+          width={48}
+          height={48}
+          alt="Close menu button"
+          onClick={onClose}
+        />
         <SidebarOption href="/" text="Home" />
         <SidebarOption href="/contact" text="Contact" />
         <SidebarOption href="/support" text="Support" />
