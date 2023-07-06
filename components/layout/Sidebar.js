@@ -29,7 +29,7 @@ export default function Sidebar({ onClose }) {
   };
   return (
     <div className={styles.sidebar}>
-      <div id="sidebarContainer" className={styles.sidebarContainer}>
+      <div className={styles.sidebarContainer}>
         <button onClick={onClose} className={styles.closeButton}>
           <Image
             src="images/Close.svg"

@@ -31,9 +31,7 @@ $sidebar-xl: 25%;
   }
   height: 100%;
   background-color: colors.$orange-o;
-  margin: 0;
   display: flex;
-  justify-content: center;
   position: fixed;
 }
 
@@ -50,8 +48,6 @@ $menuOptionSize: 2rem;
   font-size: $menuOptionSize;
   color: colors.$gray-w;
   padding: 0.5 * $menuOptionSize 2 * $menuOptionSize;
-  display: flex;
-  align-items: center;
 }
 
 .menuOption {
@@ -62,8 +58,8 @@ $menuOptionSize: 2rem;
 }
 
 .selected {
-  background-color: colors.$orange-1;
   @extend %menuOptionBase;
+  background-color: colors.$orange-1;
 }
 
 .closeButton {
