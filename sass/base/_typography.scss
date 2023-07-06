@@ -1,28 +1,8 @@
 @use "./colors.module";
-@use "./mixins" as m;
 @import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&display=swap");
 
 // DISPLAY
 .displayM {
   font-size: 3rem;
   font-weight: 700;
-}
-
-// home page display
-.displayXL {
-  font-family: "Passion One", cursive;
-  font-size: 4rem;
-  @include m.sm {
-    font-size: 6rem;
-  }
-  // @include m.md {
-  //   font-size: 9rem;
-  // }
-  // @include m.lg {
-  //   font-size: 12rem;
-  // }
-  // @include m.rwd(1400) {
-  //   font-size: 15rem;
-  // }
-  // line-height: 1;
 }

@@ -1,0 +1,23 @@
+@use "../base/mixins" as m;
+
+// home page display
+.displayXL {
+  font-family: "Passion One", cursive;
+  font-size: 8rem;
+  @include m.xs {
+    font-size: 8.5rem;
+  }
+  @include m.sm {
+    font-size: 12rem;
+  }
+  @include m.md {
+    font-size: 9rem;
+  }
+  @include m.lg {
+    font-size: 11rem;
+  }
+  @include m.xl {
+    font-size: 13rem;
+  }
+  // line-height: 1;
+}
