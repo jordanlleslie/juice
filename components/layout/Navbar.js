@@ -1,32 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
-import Spacer from "../shared/Spacer";
-import { DisplayM } from "../shared/Typeface";
 import styles from "../../styles.module.css";
-import colors from "../../sass/base/_colors.module.scss";
 
 export default function Navbar({ handleCollapse }) {
+  const navIconSize = 48;
   return (
     <div className={styles.headerContainer}>
       <div>
-        <Link href="/" className={styles.row}>
+        <Link href="/">
           <Image
+            priority={true}
+            className={styles.juiceIcon}
             src="/images/JuiceLogo.svg"
-            width={64}
-            height={64}
+            width={navIconSize}
+            height={navIconSize}
             alt="Emory Juice logo"
           />
-          <Spacer size={1} />
-          <DisplayM text="Emory Juice" color={colors["orange-o"]} />
         </Link>
       </div>
-      <Image
-        src="/images/Menu.svg"
-        width={64}
-        height={64}
-        onClick={handleCollapse}
-        alt="Open menu button"
-      />
+      <button className={styles.menuButton}>
+        <Image
+          src="/images/Menu.svg"
+          width={0.8 * navIconSize}
+          height={0.8 * navIconSize}
+          alt="Open menu button"
+          onClick={handleCollapse}
+        />
+      </button>
     </div>
   );
 }

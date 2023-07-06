@@ -51,8 +51,8 @@ $sidebar-xl: 25%;
 
 .menuOption {
   @extend %menuOptionBase;
-  :hover {
-    background-color: colors.$orange-m;
+  &:hover {
+    color: colors.$gray-4;
   }
 }
 

@@ -4,6 +4,27 @@
 
 $transition-time: 0.5s;
 
+// RESPONSIVE WIDTH OF PAGE CONTENTS
+@mixin widthSpecs {
+  margin: 0 2rem;
+  max-width: 90%;
+  @include m.sm {
+    margin-left: auto;
+    margin-right: auto;
+    width: 520px;
+  }
+  @include m.md {
+    width: 680px;
+  }
+  @include m.lg {
+    width: 840px;
+  }
+  @include m.xl {
+    width: 1000px;
+  }
+  transition: all 0.25s ease-in-out;
+}
+
 %collapsibleLayout {
   height: 100%;
   width: 100%;
@@ -19,10 +40,9 @@ $transition-time: 0.5s;
 
 // CONTAINER FOR ALL CONTENTS OF PAGE
 .childrenContainer {
-  background-color: colors.$gray-4;
-  margin: 0 1.5rem;
-  padding: 3rem 4.5rem;
+  @include widthSpecs();
   height: 100%;
+  background: palevioletred;
 }
 
 .withSidebar .mainContainer {

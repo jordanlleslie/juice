@@ -1,0 +1,18 @@
+@use "../base/interaction" as i;
+@use "../base/mixins";
+@use "./layout";
+
+.headerContainer {
+  @include layout.widthSpecs;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.juiceIcon {
+  @include i.hover("rotate");
+}
+
+.menuButton {
+  @include i.hover("scale");
+}

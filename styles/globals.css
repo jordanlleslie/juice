@@ -14,11 +14,8 @@ img {
 
 * {
   margin: 0;
+  padding: 0;
   text-decoration: none;
-}
-
-p {
-  margin: 0;
 }
 
 *:visited {
@@ -28,4 +25,5 @@ p {
 button {
   background: none;
   border: none;
+  cursor: pointer;
 }

@@ -3,7 +3,6 @@ import Head from "next/head";
 import styles from "../../styles.module.css";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import { useRouter } from "next/router";
 
 export default function Layout({ children }) {
   const [collapsed, setCollapsed] = useState(true);

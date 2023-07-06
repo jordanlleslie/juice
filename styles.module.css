@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&display=swap");
 .row {
   display: flex;
 }
@@ -7,13 +8,17 @@
   font-weight: 700;
 }
 
-/* FLEX-BOX */
-.headerContainer {
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
+.displayXL {
+  font-family: "Passion One", cursive;
+  font-size: 4rem;
+}
+@media (min-width: 576px) {
+  .displayXL {
+    font-size: 6rem;
+  }
 }
 
+/* HOVER STYLES */
 .sidebar {
   width: 100%;
   right: -100%;
@@ -61,8 +66,8 @@
   border-radius: 0.5rem;
 }
 
-.menuOption :hover {
-  background-color: #cd8b55;
+.menuOption:hover {
+  color: #ddd9e2;
 }
 
 .selected {
@@ -82,10 +87,33 @@
 }
 
 .childrenContainer {
-  background-color: #ddd9e2;
-  margin: 0 1.5rem;
-  padding: 3rem 4.5rem;
+  margin: 0 2rem;
+  max-width: 90%;
+  transition: all 0.25s ease-in-out;
   height: 100%;
+  background: palevioletred;
+}
+@media (min-width: 576px) {
+  .childrenContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 520px;
+  }
+}
+@media (min-width: 768px) {
+  .childrenContainer {
+    width: 680px;
+  }
+}
+@media (min-width: 992px) {
+  .childrenContainer {
+    width: 840px;
+  }
+}
+@media (min-width: 1200px) {
+  .childrenContainer {
+    width: 1000px;
+  }
 }
 
 .withSidebar .mainContainer {
@@ -121,6 +149,53 @@
 
 .withoutSidebar {
   transform: translateX(0);
+}
+
+.headerContainer {
+  margin: 0 2rem;
+  max-width: 90%;
+  transition: all 0.25s ease-in-out;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 576px) {
+  .headerContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 520px;
+  }
+}
+@media (min-width: 768px) {
+  .headerContainer {
+    width: 680px;
+  }
+}
+@media (min-width: 992px) {
+  .headerContainer {
+    width: 840px;
+  }
+}
+@media (min-width: 1200px) {
+  .headerContainer {
+    width: 1000px;
+  }
+}
+
+.juiceIcon {
+  transition: 0.25s all ease-in-out;
+  transform: rotate(0);
+}
+.juiceIcon:hover {
+  transform: rotate(0.125turn);
+}
+
+.menuButton {
+  transition: 0.25s all ease-in-out;
+  transform: scale(1);
+}
+.menuButton:hover {
+  transform: scale(1.125);
 }
 
 /*# sourceMappingURL=styles.module.css.map */
