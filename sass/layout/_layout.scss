@@ -45,7 +45,6 @@ $transition-time: 0.5s;
 .childrenContainer {
   @include widthSpecs();
   height: 100%;
-  // background: palevioletred;
 }
 
 .withSidebar .mainContainer {
