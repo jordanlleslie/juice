@@ -82,8 +82,8 @@
 }
 @media (min-width: 992px) {
   .sidebar {
-    width: 40%;
-    right: -40%;
+    width: 35%;
+    right: -35%;
   }
 }
 @media (min-width: 1200px) {
@@ -187,7 +187,7 @@
 }
 @media (min-width: 992px) {
   .withSidebar {
-    transform: translateX(-40%);
+    transform: translateX(-35%);
   }
 }
 @media (min-width: 1200px) {

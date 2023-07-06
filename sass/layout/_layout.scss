@@ -25,7 +25,6 @@ $transition-time: 0.5s;
   @include m.xl {
     width: 1000px;
   }
-  // transition: all 0.2s ease-in-out;
 }
 
 %collapsibleLayout {
