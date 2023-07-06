@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles.module.css";
 
+export const navIconSize = 48;
+
 export default function Navbar({ handleCollapse }) {
-  const navIconSize = 48;
   return (
     <div className={styles.headerContainer}>
       <div>
@@ -18,7 +19,7 @@ export default function Navbar({ handleCollapse }) {
           />
         </Link>
       </div>
-      <button className={styles.menuButton}>
+      <button className={styles.expandOnHover}>
         <Image
           src="/images/Menu.svg"
           width={0.8 * navIconSize}

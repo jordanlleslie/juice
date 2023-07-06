@@ -27,6 +27,9 @@ $rise-amount: 0.25rem;
       transform: translateY(-$rise-amount);
     }
   }
+  &:hover {
+    opacity: 60%;
+  }
 }
 
 $glow-radius: 0.125rem;

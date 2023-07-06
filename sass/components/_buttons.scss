@@ -1,0 +1,9 @@
+@use "../base/interaction";
+
+.expandOnHover {
+  @include interaction.hover("scale");
+}
+
+%opaqueOnHover {
+  @include interaction.hover("");
+}

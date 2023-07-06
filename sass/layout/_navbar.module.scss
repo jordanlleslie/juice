@@ -12,7 +12,3 @@
 .juiceIcon {
   @include i.hover("rotate");
 }
-
-.menuButton {
-  @include i.hover("scale");
-}

@@ -9,8 +9,9 @@ export default function Home() {
         <title>Emory Juice Ultimate</title>
       </Head>
       <section>
-        <p className={styles.displayXL}>EMORY JUICE</p>
-        <p>Club Ultimate Frisbee</p>
+        <p className={styles.mainTitle}>EMORY JUICE</p>
+        {/* <p>Club Ultimate Frisbee</p> */}
+        <p>Home Page Coming Soon!</p>
       </section>
     </Layout>
   );

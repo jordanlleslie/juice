@@ -1,5 +1,6 @@
 @use "../base/colors.module";
 @use "../base/mixins" as m;
+@use "../components/buttons";
 
 // HOW WIDE SIDEBAR IS DEPENDING ON BREAKPOINTS
 $sidebar-xs: 100%;
@@ -40,23 +41,33 @@ $sidebar-xl: 25%;
 .sidebarContainer {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
+$menuOptionSize: 2rem;
+
 %menuOptionBase {
+  font-size: $menuOptionSize;
   color: colors.$gray-w;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.5 * $menuOptionSize 2 * $menuOptionSize;
+  display: flex;
+  align-items: center;
 }
 
 .menuOption {
   @extend %menuOptionBase;
   &:hover {
-    color: colors.$gray-4;
+    background-color: colors.$orange-2;
   }
 }
 
 .selected {
-  @extend %menuOptionBase;
   background-color: colors.$orange-1;
+  @extend %menuOptionBase;
+}
+
+.closeButton {
+  @extend %opaqueOnHover;
+  align-self: flex-end;
+  margin: 1.5rem;
 }

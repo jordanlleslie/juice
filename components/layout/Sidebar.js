@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles.module.css";
 import { useRouter } from "next/router";
+import { navIconSize } from "./Navbar";
 
 export default function Sidebar({ onClose }) {
   const SidebarOption = ({ text, href }) => {
@@ -29,11 +30,11 @@ export default function Sidebar({ onClose }) {
   return (
     <div className={styles.sidebar}>
       <div id="sidebarContainer" className={styles.sidebarContainer}>
-        <button onClick={onClose}>
+        <button onClick={onClose} className={styles.closeButton}>
           <Image
             src="images/Close.svg"
-            width={48}
-            height={48}
+            width={0.6 * navIconSize}
+            height={0.6 * navIconSize}
             alt="Close menu button"
           />
         </button>

@@ -8,37 +8,56 @@
   font-weight: 700;
 }
 
-.displayXL {
+.mainTitle {
   font-family: "Passion One", cursive;
   font-size: 8rem;
+  margin-top: -0.125em;
 }
 @media (min-width: 400px) {
-  .displayXL {
+  .mainTitle {
     font-size: 8.5rem;
   }
 }
 @media (min-width: 576px) {
-  .displayXL {
+  .mainTitle {
     font-size: 12rem;
   }
 }
 @media (min-width: 768px) {
-  .displayXL {
+  .mainTitle {
     font-size: 9rem;
   }
 }
 @media (min-width: 992px) {
-  .displayXL {
+  .mainTitle {
     font-size: 11rem;
   }
 }
 @media (min-width: 1200px) {
-  .displayXL {
+  .mainTitle {
     font-size: 13rem;
   }
 }
 
 /* HOVER STYLES */
+.expandOnHover {
+  transition: 0.25s all ease-in-out;
+  transform: scale(1);
+}
+.expandOnHover:hover {
+  transform: scale(1.125);
+}
+.expandOnHover:hover {
+  opacity: 60%;
+}
+
+.closeButton {
+  transition: 0.25s all ease-in-out;
+}
+.closeButton:hover {
+  opacity: 60%;
+}
+
 .sidebar {
   width: 100%;
   right: -100%;
@@ -77,21 +96,28 @@
 .sidebarContainer {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 .selected, .menuOption {
+  font-size: 2rem;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 1rem 4rem;
+  display: flex;
+  align-items: center;
 }
 
 .menuOption:hover {
-  color: #ddd9e2;
+  background-color: #ffcd8a;
 }
 
 .selected {
   background-color: #ffbb5c;
+}
+
+.closeButton {
+  align-self: flex-end;
+  margin: 1.5rem;
 }
 
 .withoutSidebar, .withSidebar {
@@ -216,13 +242,8 @@
 .juiceIcon:hover {
   transform: rotate(0.125turn);
 }
-
-.menuButton {
-  transition: 0.25s all ease-in-out;
-  transform: scale(1);
-}
-.menuButton:hover {
-  transform: scale(1.125);
+.juiceIcon:hover {
+  opacity: 60%;
 }
 
 /*# sourceMappingURL=styles.module.css.map */
