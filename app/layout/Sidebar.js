@@ -14,9 +14,11 @@ export default function Sidebar({ onClose }) {
       e.preventDefault();
       onClose();
       const target = e.target.getAttribute("href");
-      // if target is not current page, navigate to target
+      // if target is not current page, navigate to target after sidebar closing animation
       if (target !== path) {
-        window.location = target;
+        setTimeout(() => {
+          window.location = target;
+        }, 250);
       }
     };
 
