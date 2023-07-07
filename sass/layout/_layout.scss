@@ -1,0 +1,78 @@
+@use "../base/colors.module";
+@use "../layout/sidebar.module" as s;
+@use "../base/breakpoints";
+
+$transition-time: 0.5s;
+
+// RESPONSIVE WIDTH OF PAGE CONTENTS
+@mixin widthSpecs {
+  width: 360px;
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  @include breakpoints.xs {
+    width: 400px;
+  }
+  @include breakpoints.sm {
+    width: 520px;
+  }
+  @include breakpoints.md {
+    width: 680px;
+  }
+  @include breakpoints.lg {
+    width: 840px;
+  }
+  @include breakpoints.xl {
+    width: 1000px;
+  }
+}
+
+// CONTAINS EVERYTHING EXCEPT SIDEBAR
+.mainContainer {
+  background: colors.$gray-w;
+  height: 100%;
+}
+
+// main content is darkened when sidebar is expanded
+.withSidebar .mainContainer {
+  filter: brightness(50%);
+  * {
+    // prevents content on page from being interacted with while accessing menu
+    pointer-events: none;
+  }
+}
+
+// CONTAINER FOR ALL CONTENTS OF PAGE
+.childrenContainer {
+  @include widthSpecs();
+  height: 100%;
+}
+
+%collapsibleLayout {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  transition: transform $transition-time ease-out;
+}
+
+.withSidebar {
+  @extend %collapsibleLayout;
+  transform: translateX(0 - s.$sidebar-xs);
+  @include breakpoints.sm {
+    transform: translateX(0 - s.$sidebar-sm);
+  }
+  @include breakpoints.md {
+    transform: translateX(0 - s.$sidebar-md);
+  }
+  @include breakpoints.lg {
+    transform: translateX(0 - s.$sidebar-lg);
+  }
+  @include breakpoints.xl {
+    transform: translateX(0 - s.$sidebar-xl);
+  }
+}
+
+.withoutSidebar {
+  @extend %collapsibleLayout;
+  transform: translateX(0);
+}

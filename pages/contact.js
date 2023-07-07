@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import Head from "next/head";
 
 export default function ContactPage() {
@@ -9,9 +9,7 @@ export default function ContactPage() {
           <title>Contact Us</title>
         </Head>
         <section>
-            <p>
-                Contact Juice - Coming Soon!
-            </p>
+          <p>Contact Juice - Coming Soon!</p>
         </section>
       </Layout>
     </>

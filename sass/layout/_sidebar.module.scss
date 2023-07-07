@@ -1,0 +1,69 @@
+@use "../base/colors.module";
+@use "../base/breakpoints";
+@use "../components/buttons";
+
+// HOW WIDE SIDEBAR IS DEPENDING ON BREAKPOINTS
+$sidebar-xs: 100%;
+$sidebar-sm: 50%;
+$sidebar-md: 50%;
+$sidebar-lg: 35%;
+$sidebar-xl: 25%;
+
+.sidebar {
+  width: $sidebar-xs;
+  right: -$sidebar-xs;
+
+  @include breakpoints.sm {
+    width: $sidebar-sm;
+    right: -$sidebar-sm;
+  }
+  @include breakpoints.md {
+    width: $sidebar-md;
+    right: -$sidebar-md;
+  }
+  @include breakpoints.lg {
+    width: $sidebar-lg;
+    right: -$sidebar-lg;
+  }
+  @include breakpoints.xl {
+    width: $sidebar-xl;
+    right: -$sidebar-xl;
+  }
+  height: 100%;
+  background-color: colors.$orange-o;
+  display: flex;
+  position: fixed;
+}
+
+// CONTAINS EVERYTHING INSIDE SIDEBAR
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+$menuOptionSize: 2rem;
+
+%menuOptionBase {
+  font-size: $menuOptionSize;
+  color: colors.$gray-w;
+  padding: 0.5 * $menuOptionSize 2 * $menuOptionSize;
+}
+
+.menuOption {
+  @extend %menuOptionBase;
+  &:hover {
+    background-color: colors.$orange-2;
+  }
+}
+
+.selected {
+  @extend %menuOptionBase;
+  background-color: colors.$orange-1;
+}
+
+.closeButton {
+  @extend %opaqueOnHover;
+  align-self: flex-end;
+  margin: 1.5rem;
+}
