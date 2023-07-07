@@ -1,13 +1,8 @@
+import Contact from "./Contact";
 export const metadata = {
   title: "Contact Juice",
 };
 
-export default function ContactPage() {
-  return (
-    <>
-      <section>
-        <p>Contact Juice - Coming Soon!</p>
-      </section>
-    </>
-  );
+export default function Page() {
+  return <Contact />;
 }

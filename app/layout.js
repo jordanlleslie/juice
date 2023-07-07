@@ -1,4 +1,5 @@
 import Layout from "./layout/Layout";
+import "../styles/styles.module.css";
 
 export default function RootLayout({
   // Layouts must accept a children prop.

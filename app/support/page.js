@@ -1,13 +1,9 @@
+import Support from "./Support";
+
 export const metadata = {
   title: "Support Juice",
 };
 
-export default function SupportPage() {
-  return (
-    <>
-      <section>
-        <p>Support Juice - Coming Soon!</p>
-      </section>
-    </>
-  );
+export default function Page() {
+  return <Support />;
 }

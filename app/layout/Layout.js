@@ -5,12 +5,7 @@ import { useState } from "react";
 import styles from "../../styles/styles.module.css";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import Head from "next/head";
-
-export const metadata = {
-  title: "Emory Juice Ultimate",
-  description: "Emory Juice Ultimate Frisbee",
-};
+import { usePathname } from "next/navigation";
 
 export default function Layout({ children }) {
   const [collapsed, setCollapsed] = useState(true);
@@ -25,9 +20,6 @@ export default function Layout({ children }) {
 
   return (
     <>
-      {/* <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
       <div className={collapsed ? styles.withoutSidebar : styles.withSidebar}>
         {/* SIDEBAR */}
         <Sidebar onClose={handleCollapse} />
