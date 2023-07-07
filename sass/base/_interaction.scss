@@ -8,34 +8,37 @@ $scale-amount: 1.125;
 $rise-amount: 0.25rem;
 
 @mixin hover($style) {
-  transition: $transition-duration all ease-in-out;
-  @if ($style == "rotate") {
-    transform: rotate(0);
-    &:hover {
-      transform: rotate($rotate-amount);
+  // only apply hover styles for systems with cursor, not touch screens
+  @media (hover: hover) {
+    transition: $transition-duration all ease-in-out;
+    @if ($style == "rotate") {
+      transform: rotate(0);
+      &:hover {
+        transform: rotate($rotate-amount);
+      }
     }
-  }
-  @if ($style == "scale") {
-    transform: scale(1);
-    &:hover {
-      transform: scale($scale-amount);
+    @if ($style == "scale") {
+      transform: scale(1);
+      &:hover {
+        transform: scale($scale-amount);
+      }
     }
-  }
-  @if ($style == "rise") {
-    transform: translateY(0);
-    &:hover {
-      transform: translateY(-$rise-amount);
+    @if ($style == "rise") {
+      transform: translateY(0);
+      &:hover {
+        transform: translateY(-$rise-amount);
+      }
     }
-  }
-  &:hover {
-    opacity: 60%;
+    &:hover {
+      opacity: 60%;
+    }
   }
 }
 
-$glow-radius: 0.125rem;
+// $glow-radius: 0.125rem;
 
-@mixin glow($color) {
-  :hover {
-    filter: drop-shadow(0 0 $glow-radius $color);
-  }
-}
+// @mixin glow($color) {
+//   :hover {
+//     filter: drop-shadow(0 0 $glow-radius $color);
+//   }
+// }

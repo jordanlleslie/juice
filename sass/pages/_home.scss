@@ -1,23 +1,23 @@
-@use "../base/mixins" as m;
+@use "../base/breakpoints";
 @use "../base/colors.module";
 
 // home page main title
 .mainTitle {
-  font-family: "Passion One", cursive;
+  font-family: "Passion One", sans-serif;
   font-size: 8rem;
-  @include m.xs {
+  @include breakpoints.xs {
     font-size: 8.5rem;
   }
-  @include m.sm {
+  @include breakpoints.sm {
     font-size: 12rem;
   }
-  @include m.md {
+  @include breakpoints.md {
     font-size: 9rem;
   }
-  @include m.lg {
+  @include breakpoints.lg {
     font-size: 11rem;
   }
-  @include m.xl {
+  @include breakpoints.xl {
     font-size: 13rem;
   }
   margin-top: -0.125em;

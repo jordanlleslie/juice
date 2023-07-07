@@ -1,5 +1,5 @@
 @use "../base/colors.module";
-@use "../base/mixins" as m;
+@use "../base/breakpoints";
 @use "../components/buttons";
 
 // HOW WIDE SIDEBAR IS DEPENDING ON BREAKPOINTS
@@ -13,19 +13,19 @@ $sidebar-xl: 25%;
   width: $sidebar-xs;
   right: -$sidebar-xs;
 
-  @include m.sm {
+  @include breakpoints.sm {
     width: $sidebar-sm;
     right: -$sidebar-sm;
   }
-  @include m.md {
+  @include breakpoints.md {
     width: $sidebar-md;
     right: -$sidebar-md;
   }
-  @include m.lg {
+  @include breakpoints.lg {
     width: $sidebar-lg;
     right: -$sidebar-lg;
   }
-  @include m.xl {
+  @include breakpoints.xl {
     width: $sidebar-xl;
     right: -$sidebar-xl;
   }

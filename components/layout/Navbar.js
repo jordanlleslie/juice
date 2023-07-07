@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../styles.module.css";
+import styles from "../../styles/styles.module.css";
 
 export const navIconSize = 48;
 
