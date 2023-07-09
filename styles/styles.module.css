@@ -13,6 +13,8 @@
   display: inline-block;
   padding: 12px;
   border-radius: 50%;
+}
+.socialsIcon:hover {
   background-color: #ddd9e2;
 }
 

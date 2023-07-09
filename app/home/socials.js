@@ -15,12 +15,12 @@ export default function Socials() {
   return (
     <div className={styles.socialsContainer}>
       <SocialLink
-        href="https://www.instagram.com/emoryjuiceultimate/"
-        fileName="Instagram.svg"
-      />
-      <SocialLink
         href="https://twitter.com/EmoryJuice"
         fileName="Twitter.svg"
+      />
+      <SocialLink
+        href="https://www.instagram.com/emoryjuiceultimate/"
+        fileName="Instagram.svg"
       />
       <SocialLink href="mailto: emoryultimate@gmail.com" fileName="Email.svg" />
     </div>
