@@ -9,37 +9,6 @@
   font-weight: 700;
 }
 
-.mainTitle {
-  font-family: "Passion One", sans-serif;
-  font-size: 8rem;
-  margin-top: -0.125em;
-}
-@media (min-width: 400px) {
-  .mainTitle {
-    font-size: 8.5rem;
-  }
-}
-@media (min-width: 576px) {
-  .mainTitle {
-    font-size: 12rem;
-  }
-}
-@media (min-width: 768px) {
-  .mainTitle {
-    font-size: 9rem;
-  }
-}
-@media (min-width: 992px) {
-  .mainTitle {
-    font-size: 11rem;
-  }
-}
-@media (min-width: 1200px) {
-  .mainTitle {
-    font-size: 13rem;
-  }
-}
-
 /* HOVER STYLES */
 @media (hover: hover) {
   .expandOnHover {
@@ -247,6 +216,11 @@
   .juiceIcon:hover {
     opacity: 60%;
   }
+}
+
+.socialsContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.module.css.map */

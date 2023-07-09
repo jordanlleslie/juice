@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Socials from "./socials";
 
 export const metadata = {
   title: "Emory Juice Ultimate",
@@ -13,8 +14,10 @@ export default function HomePage() {
         height={1}
         alt="Emory Juice Main Title"
         style={{ width: "100%", height: "auto" }}
+        priority={true}
       />
       <p>Home Page Coming Soon!</p>
+      <Socials />
     </>
   );
 }

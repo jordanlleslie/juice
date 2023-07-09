@@ -1,4 +1,4 @@
-import HomePage from "./homepage";
+import HomePage from "./home/home";
 
 export const metadata = {
   title: "Emory Juice Ultimate",
