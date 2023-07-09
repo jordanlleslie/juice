@@ -9,6 +9,13 @@
   font-weight: 700;
 }
 
+.socialsIcon {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #ddd9e2;
+}
+
 /* HOVER STYLES */
 @media (hover: hover) {
   .expandOnHover {
@@ -216,11 +223,6 @@
   .juiceIcon:hover {
     opacity: 60%;
   }
-}
-
-.socialsContainer {
-  display: flex;
-  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.module.css.map */
