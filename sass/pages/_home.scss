@@ -1,6 +1,13 @@
 @use "../base/colors.module";
 $iconSize: 24px;
 
+.socialsContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+
 .socialsIcon {
   display: inline-block;
   padding: 12px;

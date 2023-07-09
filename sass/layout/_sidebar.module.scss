@@ -3,7 +3,7 @@
 @use "../components/buttons";
 
 // HOW WIDE SIDEBAR IS DEPENDING ON BREAKPOINTS
-$sidebar-xs: 100%;
+$sidebar-xs: 50%;
 $sidebar-sm: 50%;
 $sidebar-md: 50%;
 $sidebar-lg: 35%;
@@ -13,14 +13,6 @@ $sidebar-xl: 25%;
   width: $sidebar-xs;
   right: -$sidebar-xs;
 
-  @include breakpoints.sm {
-    width: $sidebar-sm;
-    right: -$sidebar-sm;
-  }
-  @include breakpoints.md {
-    width: $sidebar-md;
-    right: -$sidebar-md;
-  }
   @include breakpoints.lg {
     width: $sidebar-lg;
     right: -$sidebar-lg;

@@ -9,6 +9,13 @@
   font-weight: 700;
 }
 
+.socialsContainer {
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+}
+
 .socialsIcon {
   display: inline-block;
   padding: 12px;
@@ -42,24 +49,12 @@
 }
 
 .sidebar {
-  width: 100%;
-  right: -100%;
+  width: 50%;
+  right: -50%;
   height: 100%;
   background-color: #ffa800;
   display: flex;
   position: fixed;
-}
-@media (min-width: 576px) {
-  .sidebar {
-    width: 50%;
-    right: -50%;
-  }
-}
-@media (min-width: 768px) {
-  .sidebar {
-    width: 50%;
-    right: -50%;
-  }
 }
 @media (min-width: 992px) {
   .sidebar {
@@ -152,7 +147,7 @@
 }
 
 .withSidebar {
-  transform: translateX(-100%);
+  transform: translateX(-50%);
 }
 @media (min-width: 576px) {
   .withSidebar {

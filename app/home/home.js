@@ -16,8 +16,8 @@ export default function HomePage() {
         style={{ width: "100%", height: "auto" }}
         priority={true}
       />
-      <p>Home Page Coming Soon!</p>
       <Socials />
+      <p>Emory University Club Ultimate Frisbee</p>
     </>
   );
 }
