@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Socials from "./socials";
-import { DisplayL } from "../shared/Type";
+import { DisplayM } from "../shared/Type";
 
 export const metadata = {
   title: "Emory Juice Ultimate",
@@ -17,7 +17,7 @@ export default function HomePage() {
         style={{ width: "100%", height: "auto" }}
         priority={true}
       />
-      <DisplayL>#FreshSqueezed Ultimate Frisbee</DisplayL>
+      <DisplayM>#FreshSqueezed Ultimate Frisbee</DisplayM>
       <Socials />
     </>
   );
