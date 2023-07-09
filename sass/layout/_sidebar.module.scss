@@ -47,7 +47,9 @@ $menuOptionSize: 2rem;
 
 %menuOptionBase {
   font-size: $menuOptionSize;
-
+  &:visited {
+    color: inherit;
+  }
   padding: 0.5 * $menuOptionSize 2 * $menuOptionSize;
 }
 
