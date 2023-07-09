@@ -1,4 +1,4 @@
-import { DisplayL } from "../shared/Type";
+import { DisplayL } from "../shared/Typography";
 
 export default function News() {
   return (
