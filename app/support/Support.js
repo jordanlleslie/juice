@@ -1,8 +1,9 @@
+import { DisplayL } from "../shared/Type";
 export default function Support() {
   return (
     <>
       <section>
-        <p>Support Juice - Coming Soon!</p>
+        <DisplayL>Support Juice - Coming Soon!</DisplayL>
       </section>
     </>
   );

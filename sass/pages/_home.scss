@@ -10,9 +10,12 @@ $iconSize: 24px;
 
 .socialsIcon {
   display: inline-block;
-  padding: 12px;
+  padding: 0.5 * $iconSize;
   border-radius: 50%;
   &:hover {
-    background-color: colors.$gray-4;
+    background-color: colors.$gray-5;
   }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

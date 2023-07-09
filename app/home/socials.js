@@ -6,7 +6,12 @@ const iconSize = 32;
 const SocialLink = ({ href, fileName }) => {
   return (
     <a href={href} target="_blank" className={styles.socialsIcon}>
-      <Image src={"images/" + fileName} width={iconSize} height={iconSize} />
+      <Image
+        src={"images/" + fileName}
+        width={iconSize}
+        height={iconSize}
+        alt="Social media icons"
+      />
     </a>
   );
 };

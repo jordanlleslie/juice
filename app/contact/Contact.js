@@ -1,8 +1,10 @@
+import { DisplayL } from "../shared/Type";
+
 export default function Contact() {
   return (
     <>
       <section>
-        <p>Contact Juice - Coming Soon!</p>
+        <DisplayL>Contact Juice</DisplayL>
       </section>
     </>
   );

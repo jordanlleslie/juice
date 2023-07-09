@@ -1,8 +1,14 @@
 @use "./colors.module";
+@use "./breakpoints";
 @import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&display=swap");
 
 // DISPLAY
 .displayM {
   font-size: 3rem;
+  font-weight: 700;
+}
+
+.displayL {
+  font-size: 4rem;
   font-weight: 700;
 }

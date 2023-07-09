@@ -1,8 +1,10 @@
+import { DisplayL } from "../shared/Type";
+
 export default function News() {
   return (
     <>
       <section>
-        <p>Juice News - Coming Soon!</p>
+        <DisplayL>Juice News - Coming Soon!</DisplayL>
       </section>
     </>
   );
