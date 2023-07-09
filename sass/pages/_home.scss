@@ -1,24 +1,2 @@
 @use "../base/breakpoints";
 @use "../base/colors.module";
-
-// home page main title
-.mainTitle {
-  font-family: "Passion One", sans-serif;
-  font-size: 8rem;
-  @include breakpoints.xs {
-    font-size: 8.5rem;
-  }
-  @include breakpoints.sm {
-    font-size: 12rem;
-  }
-  @include breakpoints.md {
-    font-size: 9rem;
-  }
-  @include breakpoints.lg {
-    font-size: 11rem;
-  }
-  @include breakpoints.xl {
-    font-size: 13rem;
-  }
-  margin-top: -0.125em;
-}

@@ -1,4 +1,3 @@
-import styles from "../styles/styles.module.css";
 import Image from "next/image";
 
 export const metadata = {
