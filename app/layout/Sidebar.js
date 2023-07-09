@@ -1,25 +1,27 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/styles.module.css";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { navIconSize } from "./Navbar";
 
 export default function Sidebar({ onClose }) {
+  // get current path to determine link behavior and styling
+  const path = usePathname();
   const SidebarOption = ({ text, href }) => {
-    // get current path to determine link behavior and styling
-    const currentPath = useRouter().asPath;
     const handleClose = (e) => {
       e.preventDefault();
-      onClose();
+      // if target is not current page, navigate to target. otherwise close sidebar
       const target = e.target.getAttribute("href");
-      // if target is not current page, navigate to target
-      if (target !== currentPath) {
+      if (target !== path) {
         window.location = target;
-      }
+      } else onClose();
     };
+
     return (
       <Link
-        className={href === currentPath ? styles.selected : styles.menuOption}
+        className={href === path ? styles.selected : styles.menuOption}
         href={href}
         onClick={handleClose}
       >

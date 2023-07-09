@@ -100,11 +100,11 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  color: #fff;
 }
 
 .selected, .menuOption {
   font-size: 2rem;
-  color: #fff;
   padding: 1rem 4rem;
 }
 
