@@ -11,6 +11,7 @@ export default function VideoModal({ url, onClickout }) {
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
         className={styles.video}
+        loading="eager"
       ></iframe>
     </div>
   );
