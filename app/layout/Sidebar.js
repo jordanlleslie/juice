@@ -42,7 +42,7 @@ export default function Sidebar({ onClose }) {
         </button>
         <SidebarOption href="/" text="Home" />
         <SidebarOption href="/contact" text="Contact" />
-        <SidebarOption href="/support" text="Support" />
+        <SidebarOption href="/watch" text="Watch" />
         <SidebarOption href="/news" text="News" />
       </div>
     </div>
