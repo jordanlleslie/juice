@@ -1,5 +1,5 @@
 "use client";
-import VideoModal from "./VideoModal";
+import Link from "next/link";
 import { useState } from "react";
 import { DisplayL } from "../shared/Typography";
 export default function Watch() {
@@ -11,14 +11,8 @@ export default function Watch() {
     <>
       <DisplayL>Videos</DisplayL>
       <section>
-        <button onClick={handleModal}>Justin Burnett For Callahan</button>
+        <Link href="/videos">Justin Burnett for Callahan</Link>
       </section>
-      {show && (
-        <VideoModal
-          url="https://www.youtube.com/embed/6DZXFXTR0F4"
-          onClickout={handleModal}
-        />
-      )}
     </>
   );
 }

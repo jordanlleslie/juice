@@ -1,8 +1,8 @@
 import styles from "../../styles/styles.module.css";
 
-export default function VideoModal({ url, onClickout }) {
+export default function VideoModal({ url }) {
   return (
-    <div className={styles.modal} onClick={onClickout}>
+    <div className={styles.modal}>
       <iframe
         width="560"
         height="315"

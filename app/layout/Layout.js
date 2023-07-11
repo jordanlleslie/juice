@@ -5,7 +5,6 @@ import { useState } from "react";
 import styles from "../../styles/styles.module.css";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
-import { usePathname } from "next/navigation";
 
 export default function Layout({ children }) {
   const [collapsed, setCollapsed] = useState(true);
