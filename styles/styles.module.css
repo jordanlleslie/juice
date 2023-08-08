@@ -252,4 +252,23 @@
   align-items: center;
 }
 
+.notFoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25%;
+}
+
+.notFoundMessage {
+  margin-top: 1rem;
+}
+
+.homeButton {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: #eeecf0;
+}
+
 /*# sourceMappingURL=styles.module.css.map */
